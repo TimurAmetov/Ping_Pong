@@ -12,7 +12,7 @@ class GameSprite(sprite.Sprite):
         self.rect.x = player_x
         self.rect.y = player_y
         self.speed_x = 10
-        self.speed_y = 0.5
+        self.speed_y = 1
 
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
@@ -40,7 +40,7 @@ class Racket(GameSprite):
 class Ball(GameSprite):
     def move(self):
         self.rect.x += self.speed_x
-        self.rect.y -= self.speed_y
+        self.rect.y += self.speed_y
 
 font.init()
 font1 = font.Font(None, 70)
@@ -69,45 +69,63 @@ FPS = 60
 speed_x = 1
 speed_y = 0.1
 
+game_over = False
 game = True
 pas = False
 
 while game:
-    window.blit(background, (0, 0))
-    ping.reset()
-    pong.reset()
-    ball.reset()
-    ping.move()
-    pong.move()
-    ball.move()
+    if game_over == False:
+        window.blit(background, (0, 0))
+        ping.reset()
+        pong.reset()
+        ball.reset()
+        ping.move()
+        pong.move()
+
+        if sprite.collide_rect(ball, ping) or sprite.collide_rect(ball, pong):
+            ball.speed_x = -ball.speed_x
+            if ball.rect.bottom >= ping.rect.top and ball.rect.bottom <= ping.rect.centery or ball.rect.bottom >= pong.rect.top and ball.rect.bottom <= pong.rect.centery:
+                ball.speed_y = -abs(ball.speed_y)
+
+            elif ball.rect.top <= ping.rect.bottom and ball.rect.top > ping.rect.centery or ball.rect.top <= pong.rect.bottom and ball.rect.top > pong.rect.centery:
+                ball.speed_y = abs(ball.speed_y)
+
+        if ball.rect.y <= 0 or ((ball.rect.y + ball.rect.height) >= screen_height):
+            ball.speed_y *= -1
+
+        ball.move()
+
+        if ball.rect.x >= screen_width-5:
+            a = font1.render(
+                'Игрок 1 победил', True, (255, 255, 255)
+            )
+            game_over = True
+            window.blit(a, (x, y))
+
+        if ball.rect.x <= 5:
+            b = font1.render(
+                'Игрок 2 победил', True, (255, 255, 255)
+            )
+            game_over = True
+            window.blit(b, (x, y))
+
+        if not game_over:
+            if ball.speed_x > 0:
+                while ball.rect.x <= 100:
+                    ball.move()
+            else:
+                while ball.rect.x >= pong.rect.x-100:
+                    ball.move()
 
     key_pressed = key.get_pressed()
 
-    if ball.rect.y <= 0:
-        ball.speed_y *= -1
-    if ball.rect.y >= screen_height:
-        ball.speed_y *= -1
+    if key_pressed[K_SPACE] and game_over:
+        game_over = False
+        ball.rect.x = screen_width / 2
+        ball.rect.y = screen_height / 2
+        ping.rect.x = 0
+        pong.rect.x = screen_width-100
 
-    if sprite.collide_rect(ball, ping) or sprite.collide_rect(ball, pong):
-        if ball.rect.bottom >= ping.rect.top and ball.rect.bottom <= ping.rect.centery or ball.rect.bottom >= pong.rect.top and ball.rect.bottom <= pong.rect.centery:
-            ball.speed_y = -abs(ball.speed_y)
-        elif ball.rect.top <= ping.rect.bottom and ball.rect.top >= pong.rect.centery or ball.rect.top <= pong.rect.bottom and ball.rect.top >= pong.rect.centery:
-            ball.speed_y = abs(ball.speed_y)
-
-    if key_pressed[K_SPACE] and pas == False:
-        pas = True
-
-    if ball.rect.x > screen_width:
-        a = font1.render(
-            'Игрок 1 победил', True, (255, 255, 255)
-        )
-        window.blit(a, (0, 50))
-
-    if ball.rect.x < 0:
-        b = font1.render(
-            'Игрок 2 победил', True, (255, 255, 255)
-        )
-        window.blit(b, (0, 50))
 
     for e in event.get():
         if e.type == QUIT:
