@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fa9390b-4a6c-4d18-88fe-e932046ecc5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Ping Pong.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pngimg.com - ping_pong_PNG10369.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pngimg.com - ping_pong_PNG10383.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ping_pong.py" afterDir="false" />
+    <list default="true" id="9fa9390b-4a6c-4d18-88fe-e932046ecc5d" name="Changes" comment="v1&#10;&#10;added:&#10;background&#10;ball&#10;2 racket (move)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ping_pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/ping_pong.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.fff.executor": "Run",
     "Python.ping_pong.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -68,6 +62,19 @@
       <option name="presentableId" value="Default" />
       <updated>1751294331632</updated>
     </task>
+    <task id="LOCAL-00001" summary="v1&#10;&#10;added:&#10;background&#10;ball&#10;2 racket (move)">
+      <option name="closed" value="true" />
+      <created>1751381050470</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751381050470</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1&#10;&#10;added:&#10;background&#10;ball&#10;2 racket (move)" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1&#10;&#10;added:&#10;background&#10;ball&#10;2 racket (move)" />
   </component>
 </project>
