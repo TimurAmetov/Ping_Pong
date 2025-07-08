@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fa9390b-4a6c-4d18-88fe-e932046ecc5d" name="Changes" comment="v2&#10;&#10;bag ontscoc">
+    <list default="true" id="9fa9390b-4a6c-4d18-88fe-e932046ecc5d" name="Changes" comment="v3&#10;&#10;fixed ontscoc">
+      <change afterPath="$PROJECT_DIR$/assets/ping.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ping_pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/ping_pong.py" afterDir="false" />
     </list>
@@ -31,17 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.fff.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ping_pong.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.fff.executor": "Run",
+    "Python.ping_pong.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/pycharm/PythonProject1/assets"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pycharm\PythonProject1\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pycharm\PythonProject1\assets" />
       <recent name="D:\pycharm\PythonProject1" />
@@ -78,7 +83,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751470485548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v3&#10;&#10;fixed ontscoc">
+      <option name="closed" value="true" />
+      <created>1751489908023</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751489908023</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +108,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1&#10;&#10;added:&#10;background&#10;ball&#10;2 racket (move)" />
     <MESSAGE value="v2&#10;&#10;bag ontscoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2&#10;&#10;bag ontscoc" />
+    <MESSAGE value="v3&#10;&#10;fixed ontscoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="v3&#10;&#10;fixed ontscoc" />
   </component>
 </project>
